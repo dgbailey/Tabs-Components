@@ -75,3 +75,56 @@ class TabItem {
 
 links = document.querySelectorAll('.tabs-link');
 links.forEach(function(currentValue) {return new TabLink(currentValue)});
+
+class Button{
+  constructor(element){
+    this.element = element;
+    this.btnNum = element.dataset.num;
+   
+    this.numImgs = document.querySelectorAll('.img-box').length;
+    
+    this.counter = 1;
+    this.current = document.querySelector(`.img-box[data-num ='${this.counter}']`);
+    
+    this.nextImg = new Scroller(this.current);
+
+    this.element.addEventListener('click',() => this.scroll());
+  }
+  scroll(){
+    
+    if(this.counter > this.numImgs){
+      this.counter = 1;
+    }
+    else{
+      this.counter++
+      console.log(this.counter);
+    }
+    this.btnNum = this.counter;
+    console.log(this.btnNum);
+
+    this.nextImg.select();
+    console.log(this.current);
+    
+  }
+}
+class Scroller{
+  constructor(element){
+  this.element = element;
+  this.data = this.element.dataset.num;
+
+
+  }
+
+  select(){
+    const imgs = document.querySelectorAll('.img-box');
+    imgs.forEach(function(currentValue){
+      currentValue.classList.remove('image-display')
+      currentValue.classList.add('image-nodisplay');
+    })
+    this.element.classList.remove('image-nodisplay');
+    this.element.classList.add('image-display');
+  }
+}
+
+const btnz = new Button(document.querySelector('.carousel-btn'));
+
