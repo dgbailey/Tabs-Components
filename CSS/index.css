@@ -109,6 +109,7 @@
   height: 300px;
   width: 500px;
   background: orange;
+  border: 1px dotted green;
 }
 .carousel .img-container .image-display {
   display: block;
