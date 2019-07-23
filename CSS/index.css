@@ -90,6 +90,72 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.carousel .img-container {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid crimson;
+  position: relative;
+}
+.carousel .img-container .img-box {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: orange;
+  border: 1px dotted green;
+}
+.carousel .img-container .image-display {
+  display: block;
+}
+.carousel .img-container .image-nodisplay {
+  display: none;
+}
+.carousel .carousel-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: purple;
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2;
+  right: 0px;
+}
+.carousel .carousel-btn:hover {
+  cursor: pointer;
+}
+.carousel .carousel-btn-left {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: purple;
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+.carousel .carousel-btn-left:hover {
+  cursor: pointer;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;

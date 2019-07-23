@@ -48,4 +48,77 @@
   }
 }
 
+.carousel{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:300px;
+  .img-container{
+    width:600px;
+    height:200px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border:1px solid crimson;
+    position: relative;
+
+    .img-box{
+      z-index:1;
+      height:100%;
+      width:100%;
+      background:orange;
+      border: 1px dotted green;
+    }
+
+    .image-display{
+      display:block;
+    }
+
+    .image-nodisplay{
+      display:none
+    }
+    
+
+  }
+
+  .carousel-btn{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:purple;
+    height:50px;
+    width:50px;
+    margin-left:5px;
+    color:white;
+    font-size:50px;
+    text-align:center;
+    border-radius: 50%;
+    z-index:2;
+    right:0px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  .carousel-btn-left{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:purple;
+    height:50px;
+    width:50px;
+    margin-right:5px;
+    color:white;
+    font-size:50px;
+    text-align:center;
+    border-radius:50%;
+    z-index:2;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
 
